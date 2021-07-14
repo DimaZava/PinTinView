@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		E69C8AF5269DA34800E30699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69C8AF4269DA34800E30699 /* Assets.xcassets */; };
 		E69C8AF8269DA34800E30699 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69C8AF7269DA34800E30699 /* Preview Assets.xcassets */; };
 		E69C8AFB269DA34800E30699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E69C8AF9269DA34800E30699 /* LaunchScreen.storyboard */; };
+		E6DD5150269DB665002C9399 /* ShapeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DD514F269DB665002C9399 /* ShapeExtensions.swift */; };
+		E6DD5153269E1C3B002C9399 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E6DD5152269E1C3B002C9399 /* Introspect */; };
+		E6DD5155269E2487002C9399 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DD5154269E2487002C9399 /* ArrayExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		E69C8AF7269DA34800E30699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E69C8AFA269DA34800E30699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E69C8AFC269DA34800E30699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6DD514F269DB665002C9399 /* ShapeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeExtensions.swift; sourceTree = "<group>"; };
+		E6DD5154269E2487002C9399 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6DD5153269E1C3B002C9399 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 		E69C8AED269DA34600E30699 /* PinTinView */ = {
 			isa = PBXGroup;
 			children = (
+				E6DD514E269DB605002C9399 /* Extensions */,
 				E69C8AEE269DA34600E30699 /* AppDelegate.swift */,
 				E69C8AF0269DA34600E30699 /* SceneDelegate.swift */,
 				E69C8AF2269DA34600E30699 /* ContentView.swift */,
@@ -75,6 +82,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E6DD514E269DB605002C9399 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6DD514F269DB665002C9399 /* ShapeExtensions.swift */,
+				E6DD5154269E2487002C9399 /* ArrayExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +107,9 @@
 			dependencies = (
 			);
 			name = PinTinView;
+			packageProductDependencies = (
+				E6DD5152269E1C3B002C9399 /* Introspect */,
+			);
 			productName = PinTinView;
 			productReference = E69C8AEB269DA34600E30699 /* PinTinView.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +137,9 @@
 				Base,
 			);
 			mainGroup = E69C8AE2269DA34600E30699;
+			packageReferences = (
+				E6DD5151269E1C3B002C9399 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = E69C8AEC269DA34600E30699 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E69C8AEF269DA34600E30699 /* AppDelegate.swift in Sources */,
+				E6DD5155269E2487002C9399 /* ArrayExtensions.swift in Sources */,
+				E6DD5150269DB665002C9399 /* ShapeExtensions.swift in Sources */,
 				E69C8AF1269DA34600E30699 /* SceneDelegate.swift in Sources */,
 				E69C8AF3269DA34600E30699 /* ContentView.swift in Sources */,
 			);
@@ -345,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6DD5151269E1C3B002C9399 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6DD5152269E1C3B002C9399 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6DD5151269E1C3B002C9399 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E69C8AE3269DA34600E30699 /* Project object */;
 }
