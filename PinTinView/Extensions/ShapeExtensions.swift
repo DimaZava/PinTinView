@@ -28,11 +28,9 @@ extension Shape {
     ///   - content: The color or gradient to use when filling this shape.
     ///   - border: The color or gradient to use when bordering this shape.
     /// - Returns: A shape filled with the color or gradient you supply.
-    dynamic func select(_ isSelected: Bool = false) -> some View {
-        ZStack {
-            fill(isSelected ? Color.blue : Color.clear)
-                .frame(width: isSelected ? 20 : 0, height: isSelected ? 20 : 0, alignment: .center)
-                .animation(.interpolatingSpring(mass: 1, stiffness: 350, damping: 20, initialVelocity: 10))
-        }
+    dynamic func select(_ isSelected: Bool = false, animation: Animation? = nil) -> some View {
+        fill(isSelected ? Color.blue : Color.clear)
+            .frame(width: isSelected ? 20 : 0, height: isSelected ? 20 : 0, alignment: .center)
+            .animation(animation)
     }
 }
