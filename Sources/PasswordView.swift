@@ -86,7 +86,9 @@ public struct PasswordView: View {
                         }
                     } else {
                         guard !textField.isFirstResponder else { return }
-                        textField.becomeFirstResponder()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                            textField.becomeFirstResponder()
+                        }
                     }
                 }
                 .frame(width: 0, height: 0, alignment: .center)
