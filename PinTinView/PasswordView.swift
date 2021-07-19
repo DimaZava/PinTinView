@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PasswordView.swift
 //  PinTinView
 //
 //  Created by Dmitry Zawadsky on 13.07.2021.
@@ -9,7 +9,7 @@ import Combine
 import Introspect
 import SwiftUI
 
-struct ContentView: View {
+public struct PasswordView: View {
     
     // MARK: Constants
     private let mode: Mode
@@ -41,7 +41,7 @@ struct ContentView: View {
             }
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             backgroundColor.ignoresSafeArea()
             HStack(spacing: spacing) {
@@ -115,7 +115,7 @@ struct ContentView: View {
 }
 
 // MARK: - Private Extension
-private extension ContentView {
+private extension PasswordView {
     
     /// Calculates initial or final offset for circles animation while expanding or collapsing
     /// - Parameter circleIndex: Circle index
@@ -127,7 +127,7 @@ private extension ContentView {
 }
 
 // MARK: - Internal Models
-extension ContentView {
+extension PasswordView {
     
     enum Mode {
         case writePassword
@@ -175,6 +175,6 @@ extension ContentView {
 // MARK: - PreviewProvider
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(mode: .writePassword, codeContainer: .init(), isLoading: true)
+        PasswordView(mode: .writePassword, codeContainer: .init(), isLoading: true)
     }
 }
