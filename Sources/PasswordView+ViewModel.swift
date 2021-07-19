@@ -12,18 +12,18 @@ protocol PasswordCheckable {
     var codeLength: Int { get }
 }
 
-// MARK: - Internal Models
-extension PasswordView {
+// MARK: - Models
+public extension PasswordView {
     
     enum Mode {
         
-        struct CheckPasswordDTO: PasswordCheckable {
+        public struct CheckPasswordDTO: PasswordCheckable {
             let allowedCharacters: CharacterSet = .decimalDigits
             let codeLength = 4
             let codeToCheck: String
         }
         
-        struct WritePasswordDTO: PasswordCheckable {
+        public struct WritePasswordDTO: PasswordCheckable {
             let allowedCharacters: CharacterSet = .decimalDigits
             let codeLength = 4
         }
