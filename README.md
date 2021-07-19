@@ -5,4 +5,7 @@ Supports two modes:
 * Write new pin code without check.
 * Enter pin code with check.
 
-100% SwiftUI, Swift Package Manager
+100% SwiftUI ( almost :) )
+
+Swift Package Manager
+https://github.com/DimaZava/PinTinView.git
