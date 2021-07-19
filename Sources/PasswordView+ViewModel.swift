@@ -21,11 +21,18 @@ public extension PasswordView {
             let allowedCharacters: CharacterSet = .decimalDigits
             let codeLength = 4
             let codeToCheck: String
+            
+            public init(codeToCheck: String) {
+                self.codeToCheck = codeToCheck
+            }
         }
         
         public struct WritePasswordDTO: PasswordCheckable {
             let allowedCharacters: CharacterSet = .decimalDigits
             let codeLength = 4
+            
+            public init() {
+            }
         }
         
         case checkPassword(CheckPasswordDTO)
