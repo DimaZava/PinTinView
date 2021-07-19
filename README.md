@@ -11,6 +11,8 @@ Supports two modes:
 
 100% SwiftUI ( almost :) )
 
+## Installation
+
 Swift Package Manager
 ```
 https://github.com/DimaZava/PinTinView.git
