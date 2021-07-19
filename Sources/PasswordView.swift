@@ -94,12 +94,6 @@ public struct PasswordView: View {
                 .frame(width: 0, height: 0, alignment: .center)
             }
         }
-        .onAppear {
-            // Debug
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                isLoading = false
-            }
-        }
     }
     
     // MARK: Actions
