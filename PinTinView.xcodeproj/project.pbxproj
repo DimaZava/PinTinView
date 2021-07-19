@@ -3,40 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E609B80726A5BE2200ACCC44 /* PasswordView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80626A5BE2200ACCC44 /* PasswordView+ViewModel.swift */; };
-		E609B80926A5C08800ACCC44 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80826A5C08800ACCC44 /* ShakeEffect.swift */; };
-		E609B80B26A5C6B200ACCC44 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80A26A5C6B200ACCC44 /* LoadingView.swift */; };
-		E609B80D26A5D42700ACCC44 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80C26A5D42700ACCC44 /* BindingExtensions.swift */; };
-		E69C8AEF269DA34600E30699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69C8AEE269DA34600E30699 /* AppDelegate.swift */; };
-		E69C8AF1269DA34600E30699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69C8AF0269DA34600E30699 /* SceneDelegate.swift */; };
-		E69C8AF3269DA34600E30699 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69C8AF2269DA34600E30699 /* PasswordView.swift */; };
-		E69C8AF5269DA34800E30699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69C8AF4269DA34800E30699 /* Assets.xcassets */; };
-		E69C8AF8269DA34800E30699 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E69C8AF7269DA34800E30699 /* Preview Assets.xcassets */; };
-		E69C8AFB269DA34800E30699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E69C8AF9269DA34800E30699 /* LaunchScreen.storyboard */; };
-		E6DD5150269DB665002C9399 /* ShapeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DD514F269DB665002C9399 /* ShapeExtensions.swift */; };
-		E6DD5153269E1C3B002C9399 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = E6DD5152269E1C3B002C9399 /* Introspect */; };
-		E6DD5155269E2487002C9399 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DD5154269E2487002C9399 /* CollectionExtensions.swift */; };
+		E615388426A5E4C9009BB15C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615388326A5E4B2009BB15C /* SceneDelegate.swift */; };
+		E615388526A5E4CC009BB15C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615387D26A5E4B2009BB15C /* AppDelegate.swift */; };
+		E615388626A5E4E4009BB15C /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615387926A5E4B2009BB15C /* ShakeEffect.swift */; };
+		E615388726A5E4E6009BB15C /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615387A26A5E4B2009BB15C /* BindingExtensions.swift */; };
+		E615388826A5E4E9009BB15C /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615387B26A5E4B2009BB15C /* CollectionExtensions.swift */; };
+		E615388926A5E4EA009BB15C /* ShapeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615387C26A5E4B2009BB15C /* ShapeExtensions.swift */; };
+		E615388A26A5E4EC009BB15C /* PasswordView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615388026A5E4B2009BB15C /* PasswordView+ViewModel.swift */; };
+		E615388B26A5E4EE009BB15C /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615388126A5E4B2009BB15C /* PasswordView.swift */; };
+		E615388C26A5E4F0009BB15C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615388226A5E4B2009BB15C /* LoadingView.swift */; };
+		E615389126A5EDD5009BB15C /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615389026A5EDD5009BB15C /* ColorExtensions.swift */; };
+		E688484626A5F37300F47119 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615389326A5F0E7009BB15C /* ViewExtensions.swift */; };
+		E6EDD93D26A5F19800874506 /* UIKitIntrospectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD93C26A5F19800874506 /* UIKitIntrospectionView.swift */; };
+		E6EDD93F26A5F1B000874506 /* Introspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD93E26A5F1B000874506 /* Introspect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E609B80626A5BE2200ACCC44 /* PasswordView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PasswordView+ViewModel.swift"; sourceTree = "<group>"; };
-		E609B80826A5C08800ACCC44 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
-		E609B80A26A5C6B200ACCC44 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		E609B80C26A5D42700ACCC44 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
+		E615387326A5E4B2009BB15C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E615387526A5E4B2009BB15C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E615387726A5E4B2009BB15C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E615387926A5E4B2009BB15C /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
+		E615387A26A5E4B2009BB15C /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
+		E615387B26A5E4B2009BB15C /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
+		E615387C26A5E4B2009BB15C /* ShapeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeExtensions.swift; sourceTree = "<group>"; };
+		E615387D26A5E4B2009BB15C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E615387E26A5E4B2009BB15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E615388026A5E4B2009BB15C /* PasswordView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PasswordView+ViewModel.swift"; sourceTree = "<group>"; };
+		E615388126A5E4B2009BB15C /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		E615388226A5E4B2009BB15C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E615388326A5E4B2009BB15C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E615389026A5EDD5009BB15C /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorExtensions.swift; path = Sources/PinTinView/Extensions/ColorExtensions.swift; sourceTree = SOURCE_ROOT; };
+		E615389226A5EF5E009BB15C /* PinTinView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PinTinView.entitlements; sourceTree = "<group>"; };
+		E615389326A5F0E7009BB15C /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		E653B7A626A5E1E000FBEE84 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		E69C8AEB269DA34600E30699 /* PinTinView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinTinView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E69C8AEE269DA34600E30699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E69C8AF0269DA34600E30699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E69C8AF2269DA34600E30699 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
-		E69C8AF4269DA34800E30699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E69C8AF7269DA34800E30699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E69C8AFA269DA34800E30699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E69C8AFC269DA34800E30699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6DD514F269DB665002C9399 /* ShapeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeExtensions.swift; sourceTree = "<group>"; };
-		E6DD5154269E2487002C9399 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
+		E6EDD93C26A5F19800874506 /* UIKitIntrospectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitIntrospectionView.swift; sourceTree = "<group>"; };
+		E6EDD93E26A5F1B000874506 /* Introspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introspect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,27 +50,74 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6DD5153269E1C3B002C9399 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E609B80526A5BE0100ACCC44 /* PresentationLayer */ = {
+		E615387426A5E4B2009BB15C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E69C8AF2269DA34600E30699 /* PasswordView.swift */,
-				E609B80626A5BE2200ACCC44 /* PasswordView+ViewModel.swift */,
-				E609B80A26A5C6B200ACCC44 /* LoadingView.swift */,
+				E615387526A5E4B2009BB15C /* Preview Assets.xcassets */,
 			);
-			path = PresentationLayer;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E615387826A5E4B2009BB15C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E615388126A5E4B2009BB15C /* PasswordView.swift */,
+				E688484526A5F2E800F47119 /* Introspect */,
+				E615387A26A5E4B2009BB15C /* BindingExtensions.swift */,
+				E615387B26A5E4B2009BB15C /* CollectionExtensions.swift */,
+				E615389026A5EDD5009BB15C /* ColorExtensions.swift */,
+				E615387926A5E4B2009BB15C /* ShakeEffect.swift */,
+				E615387C26A5E4B2009BB15C /* ShapeExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E615388E26A5E720009BB15C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E615388F26A5EB1E009BB15C /* PinTinView */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E615388F26A5EB1E009BB15C /* PinTinView */ = {
+			isa = PBXGroup;
+			children = (
+				E615387826A5E4B2009BB15C /* Extensions */,
+				E615388026A5E4B2009BB15C /* PasswordView+ViewModel.swift */,
+				E615388226A5E4B2009BB15C /* LoadingView.swift */,
+			);
+			path = PinTinView;
+			sourceTree = "<group>";
+		};
+		E688484526A5F2E800F47119 /* Introspect */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDD93E26A5F1B000874506 /* Introspect.swift */,
+				E6EDD93C26A5F19800874506 /* UIKitIntrospectionView.swift */,
+				E615389326A5F0E7009BB15C /* ViewExtensions.swift */,
+			);
+			path = Introspect;
 			sourceTree = "<group>";
 		};
 		E69C8AE2269DA34600E30699 = {
 			isa = PBXGroup;
 			children = (
-				E69C8AED269DA34600E30699 /* PinTinView */,
+				E615389226A5EF5E009BB15C /* PinTinView.entitlements */,
+				E653B7A626A5E1E000FBEE84 /* Package.swift */,
+				E615388E26A5E720009BB15C /* Sources */,
+				E615387426A5E4B2009BB15C /* Preview Content */,
+				E615387E26A5E4B2009BB15C /* Info.plist */,
+				E615387D26A5E4B2009BB15C /* AppDelegate.swift */,
+				E615388326A5E4B2009BB15C /* SceneDelegate.swift */,
+				E615387326A5E4B2009BB15C /* Assets.xcassets */,
+				E615387626A5E4B2009BB15C /* LaunchScreen.storyboard */,
 				E69C8AEC269DA34600E30699 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,40 +128,6 @@
 				E69C8AEB269DA34600E30699 /* PinTinView.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E69C8AED269DA34600E30699 /* PinTinView */ = {
-			isa = PBXGroup;
-			children = (
-				E6DD514E269DB605002C9399 /* Extensions */,
-				E69C8AEE269DA34600E30699 /* AppDelegate.swift */,
-				E69C8AF0269DA34600E30699 /* SceneDelegate.swift */,
-				E609B80526A5BE0100ACCC44 /* PresentationLayer */,
-				E69C8AF4269DA34800E30699 /* Assets.xcassets */,
-				E69C8AF9269DA34800E30699 /* LaunchScreen.storyboard */,
-				E69C8AFC269DA34800E30699 /* Info.plist */,
-				E69C8AF6269DA34800E30699 /* Preview Content */,
-			);
-			path = PinTinView;
-			sourceTree = "<group>";
-		};
-		E69C8AF6269DA34800E30699 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E69C8AF7269DA34800E30699 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E6DD514E269DB605002C9399 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E6DD514F269DB665002C9399 /* ShapeExtensions.swift */,
-				E6DD5154269E2487002C9399 /* CollectionExtensions.swift */,
-				E609B80826A5C08800ACCC44 /* ShakeEffect.swift */,
-				E609B80C26A5D42700ACCC44 /* BindingExtensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +147,6 @@
 			);
 			name = PinTinView;
 			packageProductDependencies = (
-				E6DD5152269E1C3B002C9399 /* Introspect */,
 			);
 			productName = PinTinView;
 			productReference = E69C8AEB269DA34600E30699 /* PinTinView.app */;
@@ -158,7 +176,6 @@
 			);
 			mainGroup = E69C8AE2269DA34600E30699;
 			packageReferences = (
-				E6DD5151269E1C3B002C9399 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = E69C8AEC269DA34600E30699 /* Products */;
 			projectDirPath = "";
@@ -174,9 +191,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E69C8AFB269DA34800E30699 /* LaunchScreen.storyboard in Resources */,
-				E69C8AF8269DA34800E30699 /* Preview Assets.xcassets in Resources */,
-				E69C8AF5269DA34800E30699 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,25 +201,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E609B80726A5BE2200ACCC44 /* PasswordView+ViewModel.swift in Sources */,
-				E609B80D26A5D42700ACCC44 /* BindingExtensions.swift in Sources */,
-				E69C8AEF269DA34600E30699 /* AppDelegate.swift in Sources */,
-				E6DD5155269E2487002C9399 /* CollectionExtensions.swift in Sources */,
-				E609B80926A5C08800ACCC44 /* ShakeEffect.swift in Sources */,
-				E6DD5150269DB665002C9399 /* ShapeExtensions.swift in Sources */,
-				E609B80B26A5C6B200ACCC44 /* LoadingView.swift in Sources */,
-				E69C8AF1269DA34600E30699 /* SceneDelegate.swift in Sources */,
-				E69C8AF3269DA34600E30699 /* PasswordView.swift in Sources */,
+				E615388A26A5E4EC009BB15C /* PasswordView+ViewModel.swift in Sources */,
+				E615389126A5EDD5009BB15C /* ColorExtensions.swift in Sources */,
+				E615388826A5E4E9009BB15C /* CollectionExtensions.swift in Sources */,
+				E615388526A5E4CC009BB15C /* AppDelegate.swift in Sources */,
+				E6EDD93D26A5F19800874506 /* UIKitIntrospectionView.swift in Sources */,
+				E615388B26A5E4EE009BB15C /* PasswordView.swift in Sources */,
+				E615388726A5E4E6009BB15C /* BindingExtensions.swift in Sources */,
+				E688484626A5F37300F47119 /* ViewExtensions.swift in Sources */,
+				E615388426A5E4C9009BB15C /* SceneDelegate.swift in Sources */,
+				E615388626A5E4E4009BB15C /* ShakeEffect.swift in Sources */,
+				E6EDD93F26A5F1B000874506 /* Introspect.swift in Sources */,
+				E615388926A5E4EA009BB15C /* ShapeExtensions.swift in Sources */,
+				E615388C26A5E4F0009BB15C /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E69C8AF9269DA34800E30699 /* LaunchScreen.storyboard */ = {
+		E615387626A5E4B2009BB15C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E69C8AFA269DA34800E30699 /* Base */,
+				E615387726A5E4B2009BB15C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -334,17 +352,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PinTinView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PinTinView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = 3KMY6RBT5Y;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PinTinView/Info.plist;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chinchillaInitiative.PinTinView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,17 +376,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PinTinView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PinTinView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = 3KMY6RBT5Y;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PinTinView/Info.plist;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chinchillaInitiative.PinTinView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -393,25 +417,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E6DD5151269E1C3B002C9399 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E6DD5152269E1C3B002C9399 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E6DD5151269E1C3B002C9399 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E69C8AE3269DA34600E30699 /* Project object */;
 }

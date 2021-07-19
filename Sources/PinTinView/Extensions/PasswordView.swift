@@ -6,7 +6,6 @@
 //
 
 import Combine
-import Introspect
 import SwiftUI
 
 public struct PasswordView: View {
@@ -16,7 +15,6 @@ public struct PasswordView: View {
     private let backgroundColor: Color = .white
     private let stackViewAnimation: Animation =
         .interpolatingSpring(mass: 1, stiffness: 400, damping: 24, initialVelocity: 1)
-        // .linear(duration: 15)
     private let spacing: CGFloat = 8
     private let loadCircleSide: CGFloat = 28
     private let circleSide: CGFloat = 20
@@ -45,7 +43,7 @@ public struct PasswordView: View {
     
     public var body: some View {
         ZStack {
-            backgroundColor.ignoresSafeArea()
+            backgroundColor.edgesIgnoringSafeArea(.all)
             HStack(spacing: spacing) {
                 if isLoading {
                     ActivityIndicator(isAnimating: $isLoading, style: .large, color: .black)
