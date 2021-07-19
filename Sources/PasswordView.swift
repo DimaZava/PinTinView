@@ -33,7 +33,7 @@ public struct PasswordView: View {
     
     
     // MARK: Lifecycle
-    init(mode: Mode, isLoading: Bool = false) {
+    public init(mode: Mode, isLoading: Bool = false) {
         self.mode = mode
         self._isLoading = .init(initialValue: isLoading)
         self._ifNeedsToHighlightError = .init(initialValue: false)
