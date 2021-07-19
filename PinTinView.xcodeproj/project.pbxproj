@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E609B80726A5BE2200ACCC44 /* PasswordView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80626A5BE2200ACCC44 /* PasswordView+ViewModel.swift */; };
+		E609B80926A5C08800ACCC44 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80826A5C08800ACCC44 /* ShakeEffect.swift */; };
+		E609B80B26A5C6B200ACCC44 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80A26A5C6B200ACCC44 /* LoadingView.swift */; };
+		E609B80D26A5D42700ACCC44 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E609B80C26A5D42700ACCC44 /* BindingExtensions.swift */; };
 		E69C8AEF269DA34600E30699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69C8AEE269DA34600E30699 /* AppDelegate.swift */; };
 		E69C8AF1269DA34600E30699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69C8AF0269DA34600E30699 /* SceneDelegate.swift */; };
 		E69C8AF3269DA34600E30699 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69C8AF2269DA34600E30699 /* PasswordView.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E609B80626A5BE2200ACCC44 /* PasswordView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PasswordView+ViewModel.swift"; sourceTree = "<group>"; };
+		E609B80826A5C08800ACCC44 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
+		E609B80A26A5C6B200ACCC44 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E609B80C26A5D42700ACCC44 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		E69C8AEB269DA34600E30699 /* PinTinView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinTinView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69C8AEE269DA34600E30699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E69C8AF0269DA34600E30699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E609B80526A5BE0100ACCC44 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E69C8AF2269DA34600E30699 /* PasswordView.swift */,
+				E609B80626A5BE2200ACCC44 /* PasswordView+ViewModel.swift */,
+				E609B80A26A5C6B200ACCC44 /* LoadingView.swift */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
 		E69C8AE2269DA34600E30699 = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +83,7 @@
 				E6DD514E269DB605002C9399 /* Extensions */,
 				E69C8AEE269DA34600E30699 /* AppDelegate.swift */,
 				E69C8AF0269DA34600E30699 /* SceneDelegate.swift */,
-				E69C8AF2269DA34600E30699 /* PasswordView.swift */,
+				E609B80526A5BE0100ACCC44 /* PresentationLayer */,
 				E69C8AF4269DA34800E30699 /* Assets.xcassets */,
 				E69C8AF9269DA34800E30699 /* LaunchScreen.storyboard */,
 				E69C8AFC269DA34800E30699 /* Info.plist */,
@@ -87,6 +105,8 @@
 			children = (
 				E6DD514F269DB665002C9399 /* ShapeExtensions.swift */,
 				E6DD5154269E2487002C9399 /* CollectionExtensions.swift */,
+				E609B80826A5C08800ACCC44 /* ShakeEffect.swift */,
+				E609B80C26A5D42700ACCC44 /* BindingExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,9 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E609B80726A5BE2200ACCC44 /* PasswordView+ViewModel.swift in Sources */,
+				E609B80D26A5D42700ACCC44 /* BindingExtensions.swift in Sources */,
 				E69C8AEF269DA34600E30699 /* AppDelegate.swift in Sources */,
 				E6DD5155269E2487002C9399 /* CollectionExtensions.swift in Sources */,
+				E609B80926A5C08800ACCC44 /* ShakeEffect.swift in Sources */,
 				E6DD5150269DB665002C9399 /* ShapeExtensions.swift in Sources */,
+				E609B80B26A5C6B200ACCC44 /* LoadingView.swift in Sources */,
 				E69C8AF1269DA34600E30699 /* SceneDelegate.swift in Sources */,
 				E69C8AF3269DA34600E30699 /* PasswordView.swift in Sources */,
 			);

@@ -21,24 +21,26 @@ public struct PasswordView: View {
     private let loadCircleSide: CGFloat = 28
     private let circleSide: CGFloat = 20
     private let keyboardDelay: Double = 0.8
-    private let autocheckDelay: Double = 1
+    private let autocheckDelay: Double = 0.5
     
     // MARK: Properites
-    var ifNeedsToAutoCheck = true
+    public var codeSelected: (String) -> Void = { _ in }
+    public var ifNeedsToAutoCheck = true
+    @State public var isLoading: Bool
     
-    @State var isLoading: Bool
+    @State private var ifNeedsToHighlightError: Bool
+    @State private var invalidAttempts: Int
     @ObservedObject private var codeContainer: CodeContainer
-    private var codeObserver: AnyCancellable?
-    private var codeSelected: (String) -> Void = { _ in }
+    @State private var autocheckTimer: Timer?
+    
     
     // MARK: Lifecycle
-    init(mode: Mode, codeContainer: CodeContainer, isLoading: Bool = false) {
+    init(mode: Mode, isLoading: Bool = false) {
         self.mode = mode
         self._isLoading = .init(initialValue: isLoading)
-        self.codeContainer = codeContainer
-        codeObserver = codeContainer.$code
-            .sink { newValue in
-            }
+        self._ifNeedsToHighlightError = .init(initialValue: false)
+        self._invalidAttempts = .init(initialValue: 0)
+        self.codeContainer = .init(mode: mode)
     }
     
     public var body: some View {
@@ -46,39 +48,37 @@ public struct PasswordView: View {
             backgroundColor.ignoresSafeArea()
             HStack(spacing: spacing) {
                 if isLoading {
-                    ZStack {
-                        Circle()
-                            .fill(backgroundColor)
-                            .frame(width: loadCircleSide, height: loadCircleSide)
-                        ProgressView()
-                            .frame(width: loadCircleSide, height: loadCircleSide)
-                    }
+                    ActivityIndicator(isAnimating: $isLoading, style: .large, color: .black)
+                        .background(backgroundColor)
                 } else {
-                    ForEach(0..<codeContainer.codeLength) { index in
+                    ForEach(0..<mode.codeLength) { index in
                         ZStack {
                             Circle()
                                 .fill(Color(.lightGray))
                             Circle()
-                                .select(codeContainer.validated[safe: index] != nil, animation: stackViewAnimation)
+                                .select(codeContainer.validated[safe: index] != nil,
+                                        isError: ifNeedsToHighlightError,
+                                        animation: stackViewAnimation)
                         }
                         .frame(width: circleSide, height: circleSide)
                         .transition(.offset(x: offset(for: index), y: 0))
-                        .animation(stackViewAnimation)
+                        .modifier(ShakeEffect(shakes: invalidAttempts * 2))
+                        .animation(invalidAttempts != 0 ? .linear : stackViewAnimation)
                     }
                 }
                 
-                TextField("", text: $codeContainer.code, onCommit: {
-                    commitCodeEntering()
-                })
-                .keyboardType(.numberPad)
-                .onReceive(Just(codeContainer.code)) { output in
-                    codeContainer.validated(newValue: output)
+                TextField("", text: $codeContainer.code.onChange { output in
+                    codeContainer.filter(newValue: output)
                     if ifNeedsToAutoCheck {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + autocheckDelay) {
+                        autocheckTimer?.invalidate()
+                        autocheckTimer = Timer.scheduledTimer(withTimeInterval: autocheckDelay, repeats: false) { _ in
                             commitCodeEntering()
                         }
                     }
-                }
+                }, onCommit: {
+                    commitCodeEntering()
+                })
+                .keyboardType(.numberPad)
                 .introspectTextField { textField in
                     textField.alpha = 0
                     if isLoading {
@@ -107,10 +107,24 @@ public struct PasswordView: View {
     // MARK: Actions
     func commitCodeEntering() {
         guard codeContainer.isCodeFull else { return }
-        // DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-        codeSelected(codeContainer.code)
-        isLoading = true
-        // }
+        
+        switch mode {
+        case .checkPassword(let checkableDTO):
+            if codeContainer.code == checkableDTO.codeToCheck {
+                codeSelected(codeContainer.code)
+                isLoading = true
+            } else {
+                invalidAttempts += 1
+                
+                ifNeedsToHighlightError = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                    ifNeedsToHighlightError = false
+                }
+            }
+        case .writePassword:
+            codeSelected(codeContainer.code)
+            isLoading = true
+        }
     }
 }
 
@@ -121,60 +135,14 @@ private extension PasswordView {
     /// - Parameter circleIndex: Circle index
     /// - Returns: Offset for animation
     func offset(for circleIndex: Int) -> CGFloat {
-        let offsetIndex = CGFloat(codeContainer.codeLength) / 2.0 - CGFloat(circleIndex) - 1.0
+        let offsetIndex = CGFloat(mode.codeLength) / 2.0 - CGFloat(circleIndex) - 1.0
         return (offsetIndex + 0.5) * circleSide + (offsetIndex + 0.5) * spacing // 0.5 for half of middle spacing
-    }
-}
-
-// MARK: - Internal Models
-extension PasswordView {
-    
-    enum Mode {
-        case writePassword
-        case checkPassword(originalPassword: Int)
-    }
-    
-    // MARK: CodeContainer
-    class CodeContainer: ObservableObject {
-        
-        // MARK: - Constants
-        let codeLength = 4
-        
-        // MARK: - Properties
-        private var allowedCharacters: CharacterSet
-        @Published var code = ""
-        var validated: String {
-            validated(newValue: code)
-        }
-        var isCodeFull: Bool {
-            code.count == codeLength
-        }
-        
-        init(allowedCharacters: CharacterSet = .decimalDigits) {
-            self.allowedCharacters = allowedCharacters
-        }
-        
-        @discardableResult
-        func validated(newValue: String) -> String {
-            if code.count > codeLength {
-                code = String(code.prefix(codeLength))
-                print("Suffixed \(code)")
-            }
-            
-            let filtered = String(newValue.unicodeScalars
-                                    .filter { allowedCharacters.contains($0) }
-                                    .map { Character($0) })
-            if filtered != newValue {
-                code = filtered
-            }
-            return code
-        }
     }
 }
 
 // MARK: - PreviewProvider
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordView(mode: .writePassword, codeContainer: .init(), isLoading: true)
+        PasswordView(mode: .writePassword(.init()))
     }
 }
